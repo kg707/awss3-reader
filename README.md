@@ -52,7 +52,7 @@ List of all object keys: [http://localhost:8080/s3api/keys/](http://localhost:80
 
 An object attributes, including content in the `body` attribute, can be retrieved by its key: `http://localhost:8080/s3api/objects/{key}`, for example [http://localhost:8080/s3api/objects/test.log](http://localhost:8080/s3api/objects/test.log)
 
-All object details in one go are returned here: [http://localhost:8080/s3api/allcontent](http://localhost:8080/s3api/allcontent)
+All object details in one go are returned here: [http://localhost:8080/s3api/allobjects](http://localhost:8080/s3api/allobjects)
 
 
 ###### TODOs
