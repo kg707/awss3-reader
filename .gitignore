@@ -1,9 +1,21 @@
 # Compiled class file
 *.class
 
-target/
+.classpath
+*.iml
+*.imp
+*/.project
+.project
+.settings
+*/target
 /.idea
-.iml
+*.versionsBackup
+*.orig
+*.ipr
+*.iws
+/.metadata
+target/
+bin/
 
 # Log file
 *.log
