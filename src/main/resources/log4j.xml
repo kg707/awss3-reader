@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+
+    <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="%d{dd-MM-yy HH:mm:ss,SS} %p %t %c{3} - %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="applog" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="file" value="/apps/logs/s3reader.log"/>
+        <param name="datePattern" value="'.'yyyy-MM-dd-HH_00_00"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="%d{dd-MM-yy HH:mm:ss,SS} %p %t [%c{3}] - %m%n"/>
+        </layout>
+    </appender>
+
+    <logger name="au.com.boral.test.awss3reader" additivity="false">
+        <level value="DEBUG" />
+        <appender-ref ref="applog"/>
+    </logger>
+
+    <root>
+        <priority value="INFO"/>
+        <appender-ref ref="applog"/>
+    </root>
+   
+</log4j:configuration>
